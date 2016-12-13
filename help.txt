@@ -1,0 +1,72 @@
+____________________________________________________
+            _____    ____     _____   _ 
+           / ____|  / __ \   / ____| / |
+          | (___   | |  | | | (___   | |
+           \___ \  | |  | |  \___ \  |_/
+           ____) | | |__| |  ____) |  _ 
+          |_____/   \____/  |_____/  |_|
+
+      Help for SOS! - system operating shell
+created by Artem Bondar through some unsleepy days
+               in November 2016
+____________________________________________________
+           available built-in commands
+____________________________________________________
+cd 
+    change catalogue
+pwd
+    prints current path
+history
+    shows commad history
+mcat
+    redirect stdin to stdout
+    [%filename%]
+    redirect file
+msed [%substring%] [%pattern%]
+    find and substitude pattern to substring
+mgrep %search pattern% [-v]
+    redirect stdin to stdout and prints only lines
+    that hit the pattern, with [-v] that omits it
+jobs
+    shows status of all current processes
+fg [%number]
+    shows status of all processes in foreground
+    with number sends current background process to
+    foreground or inverses status of foreground
+    process from running to stopped and visa versa
+bg [%number]
+    shows status of all processes in background
+    with number sends current background process to
+    foreground or inverses status of foreground
+    process from running to stopped and visa versa
+help
+    shows this file
+exit
+    exits this file
+____________________________________________________
+                     Also
+____________________________________________________
+Run with "fast" arguments to omit the loading screen
+In case of non-using real-time signals behaviour of
+updating process statuses is implemented by polling
+function after executing-function. So it takes some
+time to exec program. In this way main() is ran
+faster and at that moment polling function don't
+capture changes in process status until next process
+will be launched.
+Stderr isn't shared among forked processes so if one
+of them will try to write there, it will be stopped
+by receiving SIGTTOU.
+____________________________________________________
+                   Statistics
+____________________________________________________
+
+        Current version:     1.0.1
+        Development time:    ?? days Nov ?? - Nov 29
+        Total lines amount:  2903
+        Total source lines:  2423
+        Total headers lines: 480
+        Functions written:   77
+        Enums used:          139
+        Defines used:        15
+____________________________________________________

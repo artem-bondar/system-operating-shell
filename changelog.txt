@@ -1,0 +1,81 @@
+Alpha
+0.0.1 - .c .h templates, added Makefile, help template
+0.0.2 - inserted some copy paste from text editor, written something in .h
+0.0.3 - added function to get all environmental values
+0.0.4 - load screen & function for getting environmental values are working
+      - checked incanonical input, removed ECHO flag
+0.0.5 - started to write stdin parser
+      - returned ECHO flag
+0.1.0 - simplified stdin parser's switch: removed odd cases
+      - added job related structures with functionality
+0.1.1 - added some code for more cases in stdin parser
+      - added 2 functions to work with string
+      - some minor tests
+0.1.2 - make left/right arrows working + backspace + support for multiple lines
+      - tested a bit
+0.1.3 - make up/down arrows working + saving inputed string to history
+      - added function to delete same history records
+      - added function copy of arrow-supportable parser for non-interactive input
+0.2.0 - started commands parser
+      - minor changes to job free functions behaviour
+      - added function for detecting control characters
+      - some declarations in .h fules
+0.3.0 - removed all static protection, removed starting stage from decoder
+      - added initializers for jobs & programs
+      - added functions for fast creating programs & jobs in record
+      - written 2/3 cases for decoder
+0.4.0 - added function for fast retrieving last arguments cell and last program
+      - fixed failable initializers
+      - added convert function for literals/strings
+      - added rebuild of replace substring function from text editor
+      - added function for replacing environmental values
+      - added function for replacing history retrieves and shell arguments
+Beta
+0.5.0 - fixed free and initialize behaviour for structures, replaced mallocs/reallocs
+      - parser is done, some checks probably are required
+      - all replacing functions are checked
+0.5.1 - refactored some function from miscellaneous stuff to interface controller
+      - added error messages for all current existing errors
+      - added function to print error messages to stderr depending on stderr mode
+0.5.2 - created function templates for built-in functions
+      - added file descriptors to program structure
+      - added behaviour of creating a null terminated last argument
+      - optimized create-functions for structures
+0.5.3 - optimized command input getter function
+      - prepared main() to executable view
+      - minor changes to parser due to some wrong behaviour and memory access violations
+0.5.4 - added cartularly structure
+      - some minor additions to built-in functions
+0.6.0 - added initializers, freeshers & some other functions for cartulary structure
+      - added checks and some implementation of built-in functions
+0.7.0 - added feature to set environmental values via setenv to store them in fork processes
+      - added signal handlers
+      - added free behaviour when received ^C, also working while inputting via adding ISIG flag
+      - memory leak fixes for stdin interactive parser
+      - removed name & stdin/stdout descriptors from program structure
+      - added function for checking all arguments of built-in functions, removed those checks from them
+0.8.0 - working conveyor
+      - changed behaviour of ^C, ^D to non-signal terminating
+0.8.1 - working background behaviour
+      - added polling function for unfinished processes
+      - added error messages for unlaucnhed with exec processes
+0.9.0 - changed behaviour with handling erros in built-in functions
+      - inserted launching built-in programs from executor
+      - added help program
+      - minor changes in main
+      - added two functions for showing different types of errors
+      - completed error messages array
+Release candidate
+1.0.0 - fixed memory leaks for substitute function
+      - added functions for properly polling for terminations & stops of forked processes
+      - added functions for updating history
+      - added & checked workability of all built-in programs
+      - added fg/bg support
+      - added running from files support
+      - some tests
+1.0.1 - fixed unnecessary dependences in .h files
+      - cut all error_types in special .h file
+      - added bg on fg support by creating own group for every process
+      - more comments added
+1.0.2 - added last finish status changeable
+      - tcsetpgrp fix for file inputs
