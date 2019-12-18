@@ -13,9 +13,7 @@ all: $(BINARIES)
 sos: $(OBJS) $(HDRS)
 	$(CC) $(CFLAGS) -o $@ $^
 
-%.h.gch: %.h
-	$(CC) -c $(CFLAGS) $<
-%.o: %.c
+%.o: %.c %.h
 	$(CC) -c $(CFLAGS) $<
 
 clean:
