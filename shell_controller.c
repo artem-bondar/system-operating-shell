@@ -1,4 +1,4 @@
-#define _BSD_SOURCE /* readlink() macro requirement */
+#define _DEFAULT_SOURCE /* readlink() macro requirement */
 
 #include <stdio.h>
 #include <stdlib.h>

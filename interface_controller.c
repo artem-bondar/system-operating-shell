@@ -1,4 +1,4 @@
-﻿#define _BSD_SOURCE /* usleep() macro requirement */
+﻿#define _DEFAULT_SOURCE /* usleep() macro requirement */
 
 #include <stdio.h>
 #include <stdarg.h>
